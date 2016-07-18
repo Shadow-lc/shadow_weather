@@ -19,7 +19,7 @@ public class ShadowWeatherOpenHelper extends SQLiteOpenHelper {
 	 *  City±ÌΩ®±Ì”Ôæ‰
 	 */
 	public static final String CREATE_CITY = "create table City ("
-			+ "id integer primary key autoincrement. "
+			+ "id integer primary key autoincrement, "
 			+ "city_name text, "
 			+ "city_code text, "
 			+ "province_id integer)";
