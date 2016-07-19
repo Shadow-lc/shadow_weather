@@ -1,6 +1,7 @@
 package com.shadowweather.app.activity;
 
 import com.shadowweather.app.R;
+import com.shadowweather.app.receiver.AutoUpdateService;
 import com.shadowweather.app.util.HttpCallbackListener;
 import com.shadowweather.app.util.HttpUtil;
 import com.shadowweather.app.util.Utility;
@@ -157,7 +158,8 @@ public class WeatherActivity extends Activity implements OnClickListener {
 		currentDateText.setText(prefs.getString("current_date", ""));
 		weatherInfoLayout.setVisibility(View.VISIBLE);
 		cityNameText.setVisibility(View.VISIBLE);
-
+		Intent intent = new Intent(this, AutoUpdateService.class);
+		startService(intent);
 	}
 
 	@Override
